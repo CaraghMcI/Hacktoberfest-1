@@ -1,0 +1,42 @@
+function Alert(){
+    alert("Thank you your booking has been captured. You may now click the NEXT button.");
+}
+
+
+        window.onload=function() {
+
+            var plusButton = document.getElementById('higherButton');
+            var minusButton = document.getElementById('lowerButton');
+            var theCounter = document.getElementById('theCounter');
+            var currentValue = 0;
+        
+            function increaseNumber() {
+                currentValue+=1;
+                theCounter.innerHTML=currentValue;
+            }
+        
+            function decreaseNumber() {
+                currentValue-=1;
+                theCounter.innerHTML=currentValue;
+            }
+        
+            plusButton.addEventListener('click',increaseNumber);
+            minusButton.addEventListener('click',decreaseNumber);
+              
+            
+        }
+
+
+    function change(){
+        if(theCounter < 0){
+            document.getElementById("theCounter").innerHTML = 0 + 'green'; 
+        }
+        else if (theCounter = 0){
+            document.getElementById("theCounter").innerHTML = 0 +'red';
+        }
+        else{
+            document.getElementById("theCounter").innerHTML = 0 + 'yellow';
+        }
+       
+    }
+    
